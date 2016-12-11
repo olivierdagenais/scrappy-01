@@ -7,12 +7,12 @@
  * TODO: include diagram
  */
 
-int inputRed = 2;
-int outputRed = 3;
-int inputBlue = 4;
-int outputBlue = 5;
-int outputGreen = 6;
-int inputGreen = 7;
+const int inputRed = 2;
+const int outputRed = 3;
+const int inputBlue = 4;
+const int outputBlue = 5;
+const int outputGreen = 6;
+const int inputGreen = 7;
 
 int brightness = 0;
 int fadeAmount = 5;
