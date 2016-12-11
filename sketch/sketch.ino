@@ -18,21 +18,21 @@ int brightness = 0;
 int fadeAmount = 5;
 
 void setup() {
-  pinMode(inputRed, INPUT);
+  pinMode(inputRed, INPUT_PULLUP);
   pinMode(outputRed, OUTPUT);
-  pinMode(inputBlue, INPUT);
+  pinMode(inputBlue, INPUT_PULLUP);
   pinMode(outputBlue, OUTPUT);
   pinMode(outputGreen, OUTPUT);
-  pinMode(inputGreen, INPUT);
+  pinMode(inputGreen, INPUT_PULLUP);
 }
 
 void loop() {
   int redState = digitalRead(inputRed);
-  analogWrite(outputRed, redState == HIGH ? brightness : 0);
+  analogWrite(outputRed, redState == LOW ? brightness : 0);
   int blueState = digitalRead(inputBlue);
-  analogWrite(outputBlue, blueState == HIGH ? brightness : 0);
+  analogWrite(outputBlue, blueState == LOW ? brightness : 0);
   int greenState = digitalRead(inputGreen);
-  analogWrite(outputGreen, greenState = HIGH ? brightness : 0);
+  analogWrite(outputGreen, greenState = LOW ? brightness : 0);
 
   brightness = brightness + fadeAmount;
 
