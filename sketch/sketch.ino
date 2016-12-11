@@ -27,9 +27,12 @@ void setup() {
 }
 
 void loop() {
-  analogWrite(outputRed, brightness);
-  analogWrite(outputBlue, brightness);
-  analogWrite(outputGreen, brightness);
+  int redState = digitalRead(inputRed);
+  analogWrite(outputRed, redState == HIGH ? brightness : 0);
+  int blueState = digitalRead(inputBlue);
+  analogWrite(outputBlue, blueState == HIGH ? brightness : 0);
+  int greenState = digitalRead(inputGreen);
+  analogWrite(outputGreen, greenState = HIGH ? brightness : 0);
 
   brightness = brightness + fadeAmount;
 
